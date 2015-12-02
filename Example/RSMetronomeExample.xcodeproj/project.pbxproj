@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B311C0F539800D9FC92 /* AppDelegate.swift */; };
+		45539B341C0F539800D9FC92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B331C0F539800D9FC92 /* ViewController.swift */; };
+		45539B371C0F539800D9FC92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45539B351C0F539800D9FC92 /* Main.storyboard */; };
+		45539B391C0F539800D9FC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45539B381C0F539800D9FC92 /* Assets.xcassets */; };
+		45539B3C1C0F539800D9FC92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45539B3A1C0F539800D9FC92 /* LaunchScreen.storyboard */; };
+		457861BF1C0F53B600F6F736 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861B71C0F53B600F6F736 /* Metronome.swift */; };
+		457861C01C0F53B600F6F736 /* MetronomeSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861B81C0F53B600F6F736 /* MetronomeSounds.swift */; };
+		457861C11C0F53B600F6F736 /* tick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BA1C0F53B600F6F736 /* tick.caf */; };
+		457861C21C0F53B600F6F736 /* tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BB1C0F53B600F6F736 /* tock.caf */; };
+		457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */; };
+		457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */; };
+		457861C91C0F75CE00F6F736 /* MetronomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45539B2E1C0F539800D9FC92 /* RSMetronomeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSMetronomeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45539B311C0F539800D9FC92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45539B331C0F539800D9FC92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45539B361C0F539800D9FC92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45539B381C0F539800D9FC92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45539B3B1C0F539800D9FC92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45539B3D1C0F539800D9FC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457861B71C0F53B600F6F736 /* Metronome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		457861B81C0F53B600F6F736 /* MetronomeSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeSounds.swift; sourceTree = "<group>"; };
+		457861BA1C0F53B600F6F736 /* tick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tick.caf; sourceTree = "<group>"; };
+		457861BB1C0F53B600F6F736 /* tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tock.caf; sourceTree = "<group>"; };
+		457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeBeatType.swift; sourceTree = "<group>"; };
+		457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeSettings.swift; sourceTree = "<group>"; };
+		457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45539B2B1C0F539800D9FC92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45539B251C0F539800D9FC92 = {
+			isa = PBXGroup;
+			children = (
+				45539B301C0F539800D9FC92 /* RSMetronomeExample */,
+				45539B2F1C0F539800D9FC92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45539B2F1C0F539800D9FC92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45539B2E1C0F539800D9FC92 /* RSMetronomeExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45539B301C0F539800D9FC92 /* RSMetronomeExample */ = {
+			isa = PBXGroup;
+			children = (
+				457861B51C0F53B600F6F736 /* Source */,
+				45539B311C0F539800D9FC92 /* AppDelegate.swift */,
+				45539B331C0F539800D9FC92 /* ViewController.swift */,
+				45539B351C0F539800D9FC92 /* Main.storyboard */,
+				45539B381C0F539800D9FC92 /* Assets.xcassets */,
+				45539B3A1C0F539800D9FC92 /* LaunchScreen.storyboard */,
+				45539B3D1C0F539800D9FC92 /* Info.plist */,
+			);
+			path = RSMetronomeExample;
+			sourceTree = "<group>";
+		};
+		457861B51C0F53B600F6F736 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				457861B71C0F53B600F6F736 /* Metronome.swift */,
+				457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */,
+				457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */,
+				457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */,
+				457861B81C0F53B600F6F736 /* MetronomeSounds.swift */,
+				457861B91C0F53B600F6F736 /* Sounds */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		457861B91C0F53B600F6F736 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				457861BA1C0F53B600F6F736 /* tick.caf */,
+				457861BB1C0F53B600F6F736 /* tock.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45539B2D1C0F539800D9FC92 /* RSMetronomeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45539B401C0F539800D9FC92 /* Build configuration list for PBXNativeTarget "RSMetronomeExample" */;
+			buildPhases = (
+				45539B2A1C0F539800D9FC92 /* Sources */,
+				45539B2B1C0F539800D9FC92 /* Frameworks */,
+				45539B2C1C0F539800D9FC92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSMetronomeExample;
+			productName = RSMetronomeExample;
+			productReference = 45539B2E1C0F539800D9FC92 /* RSMetronomeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45539B261C0F539800D9FC92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = DinkyWonder;
+				TargetAttributes = {
+					45539B2D1C0F539800D9FC92 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 45539B291C0F539800D9FC92 /* Build configuration list for PBXProject "RSMetronomeExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45539B251C0F539800D9FC92;
+			productRefGroup = 45539B2F1C0F539800D9FC92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45539B2D1C0F539800D9FC92 /* RSMetronomeExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45539B2C1C0F539800D9FC92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45539B3C1C0F539800D9FC92 /* LaunchScreen.storyboard in Resources */,
+				45539B391C0F539800D9FC92 /* Assets.xcassets in Resources */,
+				45539B371C0F539800D9FC92 /* Main.storyboard in Resources */,
+				457861C21C0F53B600F6F736 /* tock.caf in Resources */,
+				457861C11C0F53B600F6F736 /* tick.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45539B2A1C0F539800D9FC92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */,
+				457861C91C0F75CE00F6F736 /* MetronomeDelegate.swift in Sources */,
+				457861BF1C0F53B600F6F736 /* Metronome.swift in Sources */,
+				45539B341C0F539800D9FC92 /* ViewController.swift in Sources */,
+				457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */,
+				457861C01C0F53B600F6F736 /* MetronomeSounds.swift in Sources */,
+				45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		45539B351C0F539800D9FC92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45539B361C0F539800D9FC92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45539B3A1C0F539800D9FC92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45539B3B1C0F539800D9FC92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45539B3E1C0F539800D9FC92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45539B3F1C0F539800D9FC92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45539B411C0F539800D9FC92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RSMetronomeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.dinkywonder.RSMetronomeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45539B421C0F539800D9FC92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RSMetronomeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.dinkywonder.RSMetronomeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45539B291C0F539800D9FC92 /* Build configuration list for PBXProject "RSMetronomeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45539B3E1C0F539800D9FC92 /* Debug */,
+				45539B3F1C0F539800D9FC92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45539B401C0F539800D9FC92 /* Build configuration list for PBXNativeTarget "RSMetronomeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45539B411C0F539800D9FC92 /* Debug */,
+				45539B421C0F539800D9FC92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45539B261C0F539800D9FC92 /* Project object */;
+}
