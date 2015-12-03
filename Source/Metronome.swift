@@ -9,31 +9,40 @@ import Foundation
 
 class Metronome {
 
-    private var thread: NSThread?
-    private let nanoSecondsPerMilliSecond = 1000000.0
+    var settings: Settings = Settings() {
+        didSet{
+            patternPlayer?.settings = settings
+        }
+    }
     
-    var beatListener: ((beatType: MetronomeBeatType) -> ())?
+    var beatListener: ((beatType: BeatType) -> ())?
     var stateListener: ((playing: Bool) -> ())?
     
-    var settings = MetronomeSettings()
-    var sounds = MetronomeSounds()
+    private var patternPlayer: PatternPlayer?
+    
+    init(stateListener: ((playing: Bool) -> ())? = nil, beatListener: ((beatType: BeatType) -> ())? = nil){
+        self.beatListener = beatListener
+        self.stateListener = stateListener
+    }
     
     /// Start the metronome
     func start(){
         
-        thread = NSThread(target: self, selector: "metronomeLoop", object: nil)
-        thread?.start()
+        // Make sure it's stopped first
+        stop()
         
-        notifyStateListener()
+        patternPlayer = PatternPlayer(settings: settings)
+        patternPlayer?.stateListener = stateListener
+        patternPlayer?.beatListener = beatListener
+        patternPlayer?.play()
     }
     
     /// Stop the metronome
     func stop(){
         
-        thread?.cancel()
-        thread = nil
-        
-        notifyStateListener()
+        if let player = patternPlayer {
+            player.stop()
+        }
     }
     
     /// Toggle the playing of the metronome
@@ -48,38 +57,12 @@ class Metronome {
     
     /// Returns a boolean indicating if the metronome is currently playing
     var isPlaying: Bool {
-        return thread != nil
-    }
-    
-    private func notifyStateListener(){
-        if let listener = stateListener {
-            listener(playing: isPlaying)
-        }
-    }
-    
-    @objc private func metronomeLoop() {
         
-        while(true) {
-            
-            if NSThread.currentThread().cancelled {
-                NSThread.exit()
-            }
-            
-            let beatType = MetronomeBeatType.DownBeat
-            sounds.soundForBeatType(beatType).play()
-            
-            if let listener = beatListener {
-                listener(beatType: beatType)
-            }
-            
-            wait()
+        if let player = patternPlayer {
+            return player.isPlaying
         }
-    }
-    
-    private func wait(){
-        let millisInterval = settings.timeInterval
-        let intervalInNanoseconds = UInt64(millisInterval * nanoSecondsPerMilliSecond)
-        mach_wait_until(mach_absolute_time() + intervalInNanoseconds)
+        
+        return false
     }
     
 }

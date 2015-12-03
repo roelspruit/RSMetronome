@@ -1,5 +1,5 @@
 //
-//  MetronomeSound.swift
+//  Sounds.swift
 //
 //  Created by Roel Spruit on 16/10/15.
 //  Copyright © 2015 DinkyWonder. All rights reserved.
@@ -8,11 +8,11 @@
 import UIKit
 import AudioToolbox
 
-struct MetronomeSounds {
-    let Tick = MetronomeSound(fileName: "tick")
-    let Tock = MetronomeSound(fileName: "tock")
+struct Sounds {
+    let Tick = Sound(fileName: "tick")
+    let Tock = Sound(fileName: "tock")
     
-    func soundForBeatType(beatType: MetronomeBeatType) -> MetronomeSound {
+    func soundForBeatType(beatType: BeatType) -> Sound {
         
         switch beatType {
             
@@ -25,7 +25,7 @@ struct MetronomeSounds {
     }
 }
 
-class MetronomeSound{
+class Sound {
 
     private var soundId: SystemSoundID = 0
     

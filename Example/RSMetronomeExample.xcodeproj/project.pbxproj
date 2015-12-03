@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450FBCB21C10A0070064575A /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCB11C10A0070064575A /* Pattern.swift */; };
+		450FBCB41C10B2EA0064575A /* TimeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCB31C10B2EA0064575A /* TimeSignature.swift */; };
+		450FBCB61C10B5400064575A /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCB51C10B5400064575A /* Rest.swift */; };
+		450FBCB81C10B6020064575A /* PlayableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCB71C10B6020064575A /* PlayableElement.swift */; };
+		450FBCBA1C10B6190064575A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCB91C10B6190064575A /* Note.swift */; };
+		450FBCBC1C10B6E40064575A /* PatternPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FBCBB1C10B6E40064575A /* PatternPlayer.swift */; };
+		453D7DCB1C103004007F96B1 /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7DCA1C103004007F96B1 /* NoteValue.swift */; };
 		454A74BE1C0F844F00F939E0 /* MetronomeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A74BD1C0F844F00F939E0 /* MetronomeUnitTests.swift */; };
 		45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B311C0F539800D9FC92 /* AppDelegate.swift */; };
 		45539B341C0F539800D9FC92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B331C0F539800D9FC92 /* ViewController.swift */; };
@@ -14,11 +21,11 @@
 		45539B391C0F539800D9FC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45539B381C0F539800D9FC92 /* Assets.xcassets */; };
 		45539B3C1C0F539800D9FC92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45539B3A1C0F539800D9FC92 /* LaunchScreen.storyboard */; };
 		457861BF1C0F53B600F6F736 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861B71C0F53B600F6F736 /* Metronome.swift */; };
-		457861C01C0F53B600F6F736 /* MetronomeSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861B81C0F53B600F6F736 /* MetronomeSounds.swift */; };
+		457861C01C0F53B600F6F736 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861B81C0F53B600F6F736 /* Sounds.swift */; };
 		457861C11C0F53B600F6F736 /* tick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BA1C0F53B600F6F736 /* tick.caf */; };
 		457861C21C0F53B600F6F736 /* tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BB1C0F53B600F6F736 /* tock.caf */; };
-		457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */; };
-		457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */; };
+		457861C51C0F543F00F6F736 /* BeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C41C0F543F00F6F736 /* BeatType.swift */; };
+		457861C71C0F54BD00F6F736 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C61C0F54BD00F6F736 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450FBCB11C10A0070064575A /* Pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		450FBCB31C10B2EA0064575A /* TimeSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSignature.swift; sourceTree = "<group>"; };
+		450FBCB51C10B5400064575A /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		450FBCB71C10B6020064575A /* PlayableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayableElement.swift; sourceTree = "<group>"; };
+		450FBCB91C10B6190064575A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		450FBCBB1C10B6E40064575A /* PatternPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternPlayer.swift; sourceTree = "<group>"; };
+		453D7DCA1C103004007F96B1 /* NoteValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteValue.swift; sourceTree = "<group>"; };
 		454A74B91C0F844F00F939E0 /* MetronomeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		454A74BC1C0F844F00F939E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454A74BD1C0F844F00F939E0 /* MetronomeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUnitTests.swift; sourceTree = "<group>"; };
@@ -43,11 +57,11 @@
 		45539B3B1C0F539800D9FC92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45539B3D1C0F539800D9FC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457861B71C0F53B600F6F736 /* Metronome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
-		457861B81C0F53B600F6F736 /* MetronomeSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeSounds.swift; sourceTree = "<group>"; };
+		457861B81C0F53B600F6F736 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		457861BA1C0F53B600F6F736 /* tick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tick.caf; sourceTree = "<group>"; };
 		457861BB1C0F53B600F6F736 /* tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tock.caf; sourceTree = "<group>"; };
-		457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeBeatType.swift; sourceTree = "<group>"; };
-		457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeSettings.swift; sourceTree = "<group>"; };
+		457861C41C0F543F00F6F736 /* BeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatType.swift; sourceTree = "<group>"; };
+		457861C61C0F54BD00F6F736 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +135,16 @@
 			isa = PBXGroup;
 			children = (
 				457861B71C0F53B600F6F736 /* Metronome.swift */,
-				457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */,
-				457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */,
-				457861B81C0F53B600F6F736 /* MetronomeSounds.swift */,
+				450FBCBB1C10B6E40064575A /* PatternPlayer.swift */,
+				457861C61C0F54BD00F6F736 /* Settings.swift */,
+				457861C41C0F543F00F6F736 /* BeatType.swift */,
+				457861B81C0F53B600F6F736 /* Sounds.swift */,
+				453D7DCA1C103004007F96B1 /* NoteValue.swift */,
+				450FBCB71C10B6020064575A /* PlayableElement.swift */,
+				450FBCB51C10B5400064575A /* Rest.swift */,
+				450FBCB91C10B6190064575A /* Note.swift */,
+				450FBCB11C10A0070064575A /* Pattern.swift */,
+				450FBCB31C10B2EA0064575A /* TimeSignature.swift */,
 				457861B91C0F53B600F6F736 /* Sounds */,
 			);
 			name = Source;
@@ -250,12 +271,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */,
+				457861C51C0F543F00F6F736 /* BeatType.swift in Sources */,
+				453D7DCB1C103004007F96B1 /* NoteValue.swift in Sources */,
+				450FBCB41C10B2EA0064575A /* TimeSignature.swift in Sources */,
 				457861BF1C0F53B600F6F736 /* Metronome.swift in Sources */,
 				45539B341C0F539800D9FC92 /* ViewController.swift in Sources */,
-				457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */,
-				457861C01C0F53B600F6F736 /* MetronomeSounds.swift in Sources */,
+				457861C71C0F54BD00F6F736 /* Settings.swift in Sources */,
+				450FBCB81C10B6020064575A /* PlayableElement.swift in Sources */,
+				450FBCB21C10A0070064575A /* Pattern.swift in Sources */,
+				450FBCB61C10B5400064575A /* Rest.swift in Sources */,
+				457861C01C0F53B600F6F736 /* Sounds.swift in Sources */,
 				45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */,
+				450FBCBA1C10B6190064575A /* Note.swift in Sources */,
+				450FBCBC1C10B6E40064575A /* PatternPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

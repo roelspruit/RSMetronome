@@ -26,17 +26,21 @@ class MetronomeUnitTests: XCTestCase {
     func testMetronomeStart(){
         
         let metronome = Metronome()
-        metronome.start()
         
         let tickExpectation = expectationWithDescription("metronomeTick")
         
-        metronome.beatListener = { (beatType: MetronomeBeatType) in
+        metronome.beatListener = { (beatType: BeatType) in
             tickExpectation.fulfill()
         }
         
+        metronome.start()
         
         waitForExpectationsWithTimeout(1.0) { (error) -> Void in }
-        
+    }
+    
+    func testNoteCalculation(){
+        XCTAssertEqual(NoteValue.Quarter.numberOfNotesInNote(.Whole), 4)
+        XCTAssertEqual(NoteValue.Eight.numberOfNotesInNote(.Quarter), 2)
     }
     
 }
