@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, MetronomeDelegate {
+class ViewController: UIViewController{
 
     @IBOutlet var flashView: UIView!
     @IBOutlet var startStopButton: UIButton!
@@ -16,7 +16,8 @@ class ViewController: UIViewController, MetronomeDelegate {
     let metronome = Metronome()
     
     override func viewDidLoad() {
-        metronome.delegate = self
+        metronome.stateListener = metronomeDidChangeState
+        metronome.beatListener = metronomeDidPlayBeat
     }
     
     @IBAction func toggleMetronome(sender: AnyObject) {
@@ -25,11 +26,11 @@ class ViewController: UIViewController, MetronomeDelegate {
 
     // MetronomeDelegate
     
-    func metronomeDidChangeState(metronome: Metronome) {
-        startStopButton.setTitle(metronome.isPlaying ? "Stop" : "Start", forState: .Normal)
+    func metronomeDidChangeState(playing: Bool) {
+        startStopButton.setTitle(playing ? "Stop" : "Start", forState: .Normal)
     }
     
-    func metronomeDidPlayBeat(metronome: Metronome, beatType: MetronomeBeatType) {
+    func metronomeDidPlayBeat(beatType: MetronomeBeatType) {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             if self.flashView.tag == 0 {
                 self.flashView.tag = 1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454A74BE1C0F844F00F939E0 /* MetronomeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A74BD1C0F844F00F939E0 /* MetronomeUnitTests.swift */; };
 		45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B311C0F539800D9FC92 /* AppDelegate.swift */; };
 		45539B341C0F539800D9FC92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45539B331C0F539800D9FC92 /* ViewController.swift */; };
 		45539B371C0F539800D9FC92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45539B351C0F539800D9FC92 /* Main.storyboard */; };
@@ -18,10 +19,22 @@
 		457861C21C0F53B600F6F736 /* tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BB1C0F53B600F6F736 /* tock.caf */; };
 		457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */; };
 		457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */; };
-		457861C91C0F75CE00F6F736 /* MetronomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		454A74BF1C0F844F00F939E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45539B261C0F539800D9FC92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45539B2D1C0F539800D9FC92;
+			remoteInfo = RSMetronomeExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		454A74B91C0F844F00F939E0 /* MetronomeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		454A74BC1C0F844F00F939E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		454A74BD1C0F844F00F939E0 /* MetronomeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUnitTests.swift; sourceTree = "<group>"; };
 		45539B2E1C0F539800D9FC92 /* RSMetronomeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSMetronomeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45539B311C0F539800D9FC92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45539B331C0F539800D9FC92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,10 +48,16 @@
 		457861BB1C0F53B600F6F736 /* tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tock.caf; sourceTree = "<group>"; };
 		457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeBeatType.swift; sourceTree = "<group>"; };
 		457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeSettings.swift; sourceTree = "<group>"; };
-		457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		454A74B61C0F844F00F939E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45539B2B1C0F539800D9FC92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454A74BA1C0F844F00F939E0 /* MetronomeUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				454A74BD1C0F844F00F939E0 /* MetronomeUnitTests.swift */,
+				454A74BB1C0F844F00F939E0 /* Supporting Files */,
+			);
+			path = MetronomeUnitTests;
+			sourceTree = "<group>";
+		};
+		454A74BB1C0F844F00F939E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				454A74BC1C0F844F00F939E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		45539B251C0F539800D9FC92 = {
 			isa = PBXGroup;
 			children = (
 				45539B301C0F539800D9FC92 /* RSMetronomeExample */,
+				454A74BA1C0F844F00F939E0 /* MetronomeUnitTests */,
 				45539B2F1C0F539800D9FC92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				45539B2E1C0F539800D9FC92 /* RSMetronomeExample.app */,
+				454A74B91C0F844F00F939E0 /* MetronomeUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				457861B71C0F53B600F6F736 /* Metronome.swift */,
-				457861C81C0F75CE00F6F736 /* MetronomeDelegate.swift */,
 				457861C61C0F54BD00F6F736 /* MetronomeSettings.swift */,
 				457861C41C0F543F00F6F736 /* MetronomeBeatType.swift */,
 				457861B81C0F53B600F6F736 /* MetronomeSounds.swift */,
@@ -105,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		454A74B81C0F844F00F939E0 /* MetronomeUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 454A74C31C0F844F00F939E0 /* Build configuration list for PBXNativeTarget "MetronomeUnitTests" */;
+			buildPhases = (
+				454A74B51C0F844F00F939E0 /* Sources */,
+				454A74B61C0F844F00F939E0 /* Frameworks */,
+				454A74B71C0F844F00F939E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				454A74C01C0F844F00F939E0 /* PBXTargetDependency */,
+			);
+			name = MetronomeUnitTests;
+			productName = MetronomeUnitTests;
+			productReference = 454A74B91C0F844F00F939E0 /* MetronomeUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45539B2D1C0F539800D9FC92 /* RSMetronomeExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45539B401C0F539800D9FC92 /* Build configuration list for PBXNativeTarget "RSMetronomeExample" */;
@@ -132,6 +187,10 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = DinkyWonder;
 				TargetAttributes = {
+					454A74B81C0F844F00F939E0 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 45539B2D1C0F539800D9FC92;
+					};
 					45539B2D1C0F539800D9FC92 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -151,11 +210,19 @@
 			projectRoot = "";
 			targets = (
 				45539B2D1C0F539800D9FC92 /* RSMetronomeExample */,
+				454A74B81C0F844F00F939E0 /* MetronomeUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		454A74B71C0F844F00F939E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45539B2C1C0F539800D9FC92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,12 +238,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		454A74B51C0F844F00F939E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454A74BE1C0F844F00F939E0 /* MetronomeUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45539B2A1C0F539800D9FC92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				457861C51C0F543F00F6F736 /* MetronomeBeatType.swift in Sources */,
-				457861C91C0F75CE00F6F736 /* MetronomeDelegate.swift in Sources */,
 				457861BF1C0F53B600F6F736 /* Metronome.swift in Sources */,
 				45539B341C0F539800D9FC92 /* ViewController.swift in Sources */,
 				457861C71C0F54BD00F6F736 /* MetronomeSettings.swift in Sources */,
@@ -186,6 +260,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		454A74C01C0F844F00F939E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45539B2D1C0F539800D9FC92 /* RSMetronomeExample */;
+			targetProxy = 454A74BF1C0F844F00F939E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45539B351C0F539800D9FC92 /* Main.storyboard */ = {
@@ -207,6 +289,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		454A74C11C0F844F00F939E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = MetronomeUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSMetronomeExample.app/RSMetronomeExample";
+			};
+			name = Debug;
+		};
+		454A74C21C0F844F00F939E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MetronomeUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSMetronomeExample.app/RSMetronomeExample";
+			};
+			name = Release;
+		};
 		45539B3E1C0F539800D9FC92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -243,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -281,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -313,6 +425,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		454A74C31C0F844F00F939E0 /* Build configuration list for PBXNativeTarget "MetronomeUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454A74C11C0F844F00F939E0 /* Debug */,
+				454A74C21C0F844F00F939E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45539B291C0F539800D9FC92 /* Build configuration list for PBXProject "RSMetronomeExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

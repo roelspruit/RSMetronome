@@ -12,7 +12,9 @@ class Metronome {
     private var thread: NSThread?
     private let nanoSecondsPerMilliSecond = 1000000.0
     
-    var delegate: MetronomeDelegate?
+    var beatListener: ((beatType: MetronomeBeatType) -> ())?
+    var stateListener: ((playing: Bool) -> ())?
+    
     var settings = MetronomeSettings()
     var sounds = MetronomeSounds()
     
@@ -22,9 +24,7 @@ class Metronome {
         thread = NSThread(target: self, selector: "metronomeLoop", object: nil)
         thread?.start()
         
-        if let del = delegate {
-            del.metronomeDidChangeState(self)
-        }
+        notifyStateListener()
     }
     
     /// Stop the metronome
@@ -33,9 +33,7 @@ class Metronome {
         thread?.cancel()
         thread = nil
         
-        if let del = delegate {
-            del.metronomeDidChangeState(self)
-        }
+        notifyStateListener()
     }
     
     /// Toggle the playing of the metronome
@@ -53,6 +51,12 @@ class Metronome {
         return thread != nil
     }
     
+    private func notifyStateListener(){
+        if let listener = stateListener {
+            listener(playing: isPlaying)
+        }
+    }
+    
     @objc private func metronomeLoop() {
         
         while(true) {
@@ -61,10 +65,11 @@ class Metronome {
                 NSThread.exit()
             }
             
-            sounds.soundForBeatType(.DownBeat).play()
+            let beatType = MetronomeBeatType.DownBeat
+            sounds.soundForBeatType(beatType).play()
             
-            if let del = delegate {
-                del.metronomeDidPlayBeat(self, beatType: .DownBeat)
+            if let listener = beatListener {
+                listener(beatType: beatType)
             }
             
             wait()
