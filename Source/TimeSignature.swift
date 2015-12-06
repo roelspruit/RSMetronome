@@ -8,6 +8,6 @@
 import UIKit
 
 struct TimeSignature {
-    var beats: Int?
-    var noteValue: NoteValue?
+    var beats = 4
+    var noteValue = NoteValue.Quarter
 }

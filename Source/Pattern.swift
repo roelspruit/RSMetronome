@@ -12,15 +12,26 @@ struct Pattern {
     var iterator = 0
     var elements = [PlayableElement]()
     
-    static func withValues(values: [NoteValue]) -> Pattern {
-
-        var p = Pattern()
-        p.elements = values.map{Note(value: $0)}
-        
-        return p
+    init(elements: [PlayableElement]){
+        self.elements = elements
+    }
+    
+    init(values: [NoteValue]){
+        elements = values.enumerate().map(noteWithIndex)
+    }
+    
+    init(timeSignature: TimeSignature){
+        for var i = 0; i < timeSignature.beats; i++ {
+            elements.append(noteWithIndex(i, value: timeSignature.noteValue))
+        }
+    }
+    
+    private func noteWithIndex(index: Int, value: NoteValue) -> Note{
+        let beatType = index == 0 ? BeatType.DownBeat : BeatType.Beat
+        return Note(value: value, beatType: beatType)
     }
     
     static var QuarterNotes: Pattern {
-        return Pattern.withValues([.Quarter, .Quarter, .Quarter, .Quarter])
+        return Pattern(values: [.Quarter, .Quarter, .Quarter, .Quarter])
     }
 }

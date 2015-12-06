@@ -9,4 +9,5 @@ import Foundation
 
 protocol PlayableElement {
     var value: NoteValue { get }
+    var beatType: BeatType { get }
 }

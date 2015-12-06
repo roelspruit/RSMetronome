@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,41 +13,75 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="009-QN-ABz">
-                                <rect key="frame" x="274.5" y="279.5" width="51" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="THg-tc-Qxw">
+                                <rect key="frame" x="20" y="40" width="560" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="KqJ-xE-80C"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17q-4E-RIe">
+                                <rect key="frame" x="250.5" y="260" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Za-4Y-XZ4"/>
+                                    <constraint firstAttribute="width" constant="100" id="w0R-eM-l2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="toggleMetronome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uNL-SC-KTc"/>
+                                    <action selector="toggleMetronome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6v-7n-eqU"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DmF-5x-ZcV">
-                                <rect key="frame" x="180" y="67" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.8862745098" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXt-NW-aec">
+                                <rect key="frame" x="480" y="260" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="p9S-Ou-1En"/>
-                                    <constraint firstAttribute="width" constant="150" id="tSq-pN-vz8"/>
+                                    <constraint firstAttribute="width" constant="100" id="8nO-ow-Z85"/>
+                                    <constraint firstAttribute="height" constant="40" id="pR0-LH-fHN"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear" destination="BYZ-38-t0r" eventType="touchUpInside" id="gl8-KO-dI4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C32-Dt-BJ7">
+                                <rect key="frame" x="28" y="261" width="57" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="whT-ar-qDB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Tap"/>
+                                <connections>
+                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNe-Fl-QVH"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="009-QN-ABz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xii-cH-oDC"/>
-                            <constraint firstItem="DmF-5x-ZcV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ds9-vq-6su"/>
-                            <constraint firstItem="009-QN-ABz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wH4-e8-eHn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IXt-NW-aec" secondAttribute="bottom" constant="20" id="3Gv-Xg-Ge7"/>
+                            <constraint firstItem="THg-tc-Qxw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5L4-3G-ceC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C32-Dt-BJ7" secondAttribute="bottom" constant="20" id="7fF-aQ-HiY"/>
+                            <constraint firstItem="C32-Dt-BJ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="GJR-I3-1GQ"/>
+                            <constraint firstItem="IXt-NW-aec" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Xxg-6Y-RkK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="17q-4E-RIe" secondAttribute="bottom" constant="20" id="bjY-kV-q2t"/>
+                            <constraint firstAttribute="trailing" secondItem="THg-tc-Qxw" secondAttribute="trailing" constant="20" id="ihR-Ph-efH"/>
+                            <constraint firstItem="THg-tc-Qxw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jHa-xg-74Y"/>
+                            <constraint firstItem="17q-4E-RIe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfd-qh-iDi"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="320"/>
                     <connections>
-                        <outlet property="flashView" destination="DmF-5x-ZcV" id="m5O-va-dpM"/>
-                        <outlet property="startStopButton" destination="009-QN-ABz" id="NOi-Vj-BR2"/>
+                        <outlet property="stackView" destination="THg-tc-Qxw" id="CwP-0x-Oky"/>
+                        <outlet property="startStopButton" destination="17q-4E-RIe" id="Oc4-eq-20H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="470" y="324"/>
         </scene>
     </scenes>
 </document>

@@ -29,7 +29,7 @@ class MetronomeUnitTests: XCTestCase {
         
         let tickExpectation = expectationWithDescription("metronomeTick")
         
-        metronome.beatListener = { (beatType: BeatType) in
+        metronome.beatListener = { (beatType: BeatType, index: Int) in
             tickExpectation.fulfill()
         }
         

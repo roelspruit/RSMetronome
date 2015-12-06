@@ -15,12 +15,12 @@ class Metronome {
         }
     }
     
-    var beatListener: ((beatType: BeatType) -> ())?
+    var beatListener: ((beatType: BeatType, index: Int) -> ())?
     var stateListener: ((playing: Bool) -> ())?
     
     private var patternPlayer: PatternPlayer?
     
-    init(stateListener: ((playing: Bool) -> ())? = nil, beatListener: ((beatType: BeatType) -> ())? = nil){
+    init(stateListener: ((playing: Bool) -> ())? = nil, beatListener: ((beatType: BeatType, index: Int) -> ())? = nil){
         self.beatListener = beatListener
         self.stateListener = stateListener
     }

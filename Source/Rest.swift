@@ -8,5 +8,11 @@
 import UIKit
 
 struct Rest: PlayableElement {
-    var value: NoteValue = .Quarter
+    var value = NoteValue.Quarter
+    var beatType = BeatType.Beat
+    
+    init(value: NoteValue, beatType: BeatType = BeatType.Beat){
+        self.value = value
+        self.beatType = beatType
+    }
 }

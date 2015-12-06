@@ -13,9 +13,9 @@ class PatternPlayer {
     var settings = Settings()
     
     private var sounds = Sounds()
-    private var iterator = 0
+    private var iterator = -1
     
-    var beatListener: ((beatType: BeatType) -> ())?
+    var beatListener: ((beatType: BeatType, index: Int) -> ())?
     var stateListener: ((playing: Bool) -> ())?
     
     private var thread: NSThread?
@@ -78,6 +78,10 @@ class PatternPlayer {
                 playElement(element)
             }
             
+            if let listener = beatListener {
+                listener(beatType: element.beatType, index: iterator)
+            }
+            
             waitForElement(element)
         }
         
@@ -86,13 +90,8 @@ class PatternPlayer {
     
     private func playElement(element: PlayableElement){
         
-        let beatType = iterator == 0 ? BeatType.DownBeat : BeatType.UpBeat
+        sounds.soundForBeatType(element.beatType).play()
         
-        sounds.soundForBeatType(beatType).play()
-        
-        if let listener = beatListener {
-            listener(beatType: beatType)
-        }
     }
     
     private func waitForElement(element: PlayableElement){
