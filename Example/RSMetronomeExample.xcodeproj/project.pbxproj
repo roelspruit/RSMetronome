@@ -26,6 +26,7 @@
 		457861C21C0F53B600F6F736 /* tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = 457861BB1C0F53B600F6F736 /* tock.caf */; };
 		457861C51C0F543F00F6F736 /* BeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C41C0F543F00F6F736 /* BeatType.swift */; };
 		457861C71C0F54BD00F6F736 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457861C61C0F54BD00F6F736 /* Settings.swift */; };
+		457E909E1C15700500DC2ABB /* Tempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E909D1C15700500DC2ABB /* Tempo.swift */; };
 		45FA522B1C14D53600A42CA1 /* TapTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA522A1C14D53600A42CA1 /* TapTempo.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		457861BB1C0F53B600F6F736 /* tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tock.caf; sourceTree = "<group>"; };
 		457861C41C0F543F00F6F736 /* BeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatType.swift; sourceTree = "<group>"; };
 		457861C61C0F54BD00F6F736 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		457E909D1C15700500DC2ABB /* Tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tempo.swift; sourceTree = "<group>"; };
 		45FA522A1C14D53600A42CA1 /* TapTempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapTempo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				450FBCB11C10A0070064575A /* Pattern.swift */,
 				450FBCB31C10B2EA0064575A /* TimeSignature.swift */,
 				45FA522A1C14D53600A42CA1 /* TapTempo.swift */,
+				457E909D1C15700500DC2ABB /* Tempo.swift */,
 				457861B91C0F53B600F6F736 /* Sounds */,
 			);
 			name = Source;
@@ -283,6 +286,7 @@
 				457861C71C0F54BD00F6F736 /* Settings.swift in Sources */,
 				450FBCB81C10B6020064575A /* PlayableElement.swift in Sources */,
 				450FBCB21C10A0070064575A /* Pattern.swift in Sources */,
+				457E909E1C15700500DC2ABB /* Tempo.swift in Sources */,
 				450FBCB61C10B5400064575A /* Rest.swift in Sources */,
 				457861C01C0F53B600F6F736 /* Sounds.swift in Sources */,
 				45539B321C0F539800D9FC92 /* AppDelegate.swift in Sources */,

@@ -20,3 +20,15 @@ metronome.stop()
 ```Swift
 metronome.settings.tempo = 60
 ```
+
+### Tap Tempo
+The TapTempo class can help you determine a tempo by averaging the time between a number of taps on a button.
+
+```Swift
+let tapTempo = TapTempo(samples: 3)
+tapTempo.tap()
+// Wait
+tapTempo.tap()
+// Wait
+let tempo = tapTempo.tap()
+```

@@ -43,4 +43,9 @@ class MetronomeUnitTests: XCTestCase {
         XCTAssertEqual(NoteValue.Eight.numberOfNotesInNote(.Quarter), 2)
     }
     
+    func testTempoNames(){
+        XCTAssertEqual(Tempo(bpm: 40).name, "Largo")
+        XCTAssertEqual(Tempo(bpm: 150).name, "Allegro / Vivace")
+    }
+    
 }

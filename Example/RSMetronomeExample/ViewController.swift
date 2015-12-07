@@ -16,9 +16,10 @@ class ViewController: UIViewController{
     
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var startStopButton: UIButton!
+    @IBOutlet var tapButton: UIButton!
     
     var metronome = Metronome()
-    var tapTempo = TapTempo()
+    var tapTempo = TapTempo(samples: 3)
     
     override func viewDidLoad() {
         metronome = Metronome(stateListener: metronomeDidChangeState, beatListener: metronomeDidPlayBeat)
@@ -60,7 +61,10 @@ class ViewController: UIViewController{
     }
     
     @IBAction func tap(sender: AnyObject) {
-        tapTempo.tap()
+        let tempo = tapTempo.tap()
+        if tempo > 0 {
+            tapButton.setTitle("Tap: \(tempo)", forState: .Normal)
+        }
     }
     
     @IBAction func toggleMetronome(sender: AnyObject) {

@@ -48,9 +48,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C32-Dt-BJ7">
-                                <rect key="frame" x="28" y="261" width="57" height="39"/>
+                                <rect key="frame" x="28" y="261" width="122" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="whT-ar-qDB"/>
+                                    <constraint firstAttribute="width" constant="122" id="Jt4-I5-IMQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Tap"/>
@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="stackView" destination="THg-tc-Qxw" id="CwP-0x-Oky"/>
                         <outlet property="startStopButton" destination="17q-4E-RIe" id="Oc4-eq-20H"/>
+                        <outlet property="tapButton" destination="C32-Dt-BJ7" id="E4w-WE-3Nh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,16 +10,17 @@ import Foundation
 
 class TapTempo {
     
-    var maximumSamples = 4
+    var maximumSamples = 3
     
     private var samples = [NSTimeInterval]()
     private var lastTap: NSDate?
     
-    init(samples: Int = 4){
+    init(samples: Int = 3){
        maximumSamples = samples
     }
     
     var tempo: Int {
+        
         guard !samples.isEmpty else {
             return 0
         }
@@ -29,7 +30,7 @@ class TapTempo {
         return bpm
     }
     
-    func tap(){
+    func tap() -> Int{
         
         let currentDate = NSDate()
         
@@ -43,6 +44,8 @@ class TapTempo {
         }
         
         lastTap = currentDate
+        
+        return tempo
     }
 
 }
