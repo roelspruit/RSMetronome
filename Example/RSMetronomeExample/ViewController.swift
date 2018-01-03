@@ -33,18 +33,18 @@ class ViewController: UIViewController{
         var colorCount = 1
         var lightBackground = false
         
-        for var i = 0; i < 16; i++ {
+        for var i in 0...15 {
             
             let btn = UIButton()
-            btn.backgroundColor = lightBackground ? UIColor.lightGrayColor() : UIColor.darkGrayColor()
-            btn.addTarget(self, action: Selector("machineButtonClicked:"), forControlEvents: .TouchUpInside)
+            btn.backgroundColor = lightBackground ? UIColor.lightGray : UIColor.darkGray
+            btn.addTarget(self, action: #selector(machineButtonClicked), for: .touchUpInside)
             btn.tag = lightBackground ? 1 : 0
             
             if colorCount == 4 {
                 colorCount = 1
                 lightBackground = !lightBackground
             }else{
-                colorCount++
+                colorCount += 1
             }
             
             stackView.addArrangedSubview(btn)
@@ -54,25 +54,25 @@ class ViewController: UIViewController{
     
     @IBAction func clear(){
         for btn in buttons {
-            btn.setTitle("", forState: .Normal)
+            btn.setTitle("", for: .normal)
         }
         
         createPatternFromButtons()
     }
     
-    @IBAction func tap(sender: AnyObject) {
+    @IBAction func tap(_ sender: Any) {
         let tempo = tapTempo.tap()
         if tempo > 0 {
-            tapButton.setTitle("Tap: \(tempo)", forState: .Normal)
+            tapButton.setTitle("Tap: \(tempo)", for: .normal)
         }
     }
     
-    @IBAction func toggleMetronome(sender: AnyObject) {
+    @IBAction func toggleMetronome(_ sender: Any) {
         metronome.toggle()
     }
     
     func metronomeDidChangeState(playing: Bool) {
-        startStopButton.setTitle(playing ? "Stop" : "Start", forState: .Normal)
+        startStopButton.setTitle(playing ? "Stop" : "Start", for: .normal)
     }
     
     func metronomeDidPlayBeat(beatType: BeatType, index: Int) {
@@ -80,16 +80,16 @@ class ViewController: UIViewController{
         
         if index == 0 {
             for btn in self.buttons {
-                dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                    btn.backgroundColor = btn.tag == 1 ? UIColor.lightGrayColor() : UIColor.darkGrayColor()
+                DispatchQueue.main.async() { () -> Void in
+                    btn.backgroundColor = btn.tag == 1 ? UIColor.lightGray : UIColor.darkGray
                 }
             }
         }
         
         let btn = self.buttons[index]
         
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            btn.backgroundColor = UIColor.redColor()
+        DispatchQueue.main.async() { () -> Void in
+            btn.backgroundColor = UIColor.red
         }
         
     }
@@ -100,8 +100,8 @@ class ViewController: UIViewController{
         
         for btn in buttons {
             
-            let title = btn.titleForState(.Normal)
-            if let t = title, i = Int(t), value = NoteValue(rawValue: i) {
+            let title = btn.title(for: .normal)
+            if let t = title, let i = Int(t), let value = NoteValue(rawValue: i) {
                 p.append(Note(value: value))
             }else{
                 p.append(Rest(value: .Sixteenth))
@@ -117,19 +117,23 @@ class ViewController: UIViewController{
         }
     }
     
-    @IBAction func machineButtonClicked(sender: UIButton) {
+    @IBAction func machineButtonClicked(_ sender: Any) {
         
-        let title = sender.titleForState(.Normal)
-        if let t = title, i = Int(t) {
+        guard let btn = sender as? UIButton else {
+            return
+        }
+        
+        let title = btn.title(for: .normal)
+        if let t = title, let i = Int(t) {
             
             if i == NoteValue.Sixteenth.rawValue {
-                sender.setTitle("", forState: .Normal)
+                btn.setTitle("", for: .normal)
             }else{
-                sender.setTitle("\(i * 2)", forState: .Normal)
+                btn.setTitle("\(i * 2)", for: .normal)
             }
             
         }else{
-            sender.setTitle("4", forState: .Normal)
+            btn.setTitle("4", for: .normal)
         }
         
         createPatternFromButtons()

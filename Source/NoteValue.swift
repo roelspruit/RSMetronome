@@ -26,7 +26,7 @@ enum NoteValue: Int {
         let milliSecondsPerSecond = 1000.0
         
         let secondsBetweenBeats = 60.0 / Double(tempo)
-        let secondsForNote = secondsBetweenBeats / Double(numberOfNotesInNote(tempoNote))
+        let secondsForNote = secondsBetweenBeats / Double(numberOfNotesInNote(note: tempoNote))
         
         return UInt64(secondsForNote * milliSecondsPerSecond * nanoSecondsPerMilliSecond)
     }

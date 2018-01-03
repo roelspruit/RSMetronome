@@ -31,8 +31,8 @@ class Sound {
     
     init(fileName: String){
         
-        if let soundURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: "caf") {            
-            AudioServicesCreateSystemSoundID(soundURL, &soundId)
+        if let soundURL = Bundle.main.url(forResource: fileName, withExtension: "caf") {
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundId)
         }
     }
     

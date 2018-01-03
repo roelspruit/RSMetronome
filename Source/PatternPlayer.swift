@@ -15,10 +15,10 @@ class PatternPlayer {
     private var sounds = Sounds()
     private var iterator = -1
     
-    var beatListener: ((beatType: BeatType, index: Int) -> ())?
-    var stateListener: ((playing: Bool) -> ())?
+    var beatListener: ((_ beatType: BeatType, _ index: Int) -> ())?
+    var stateListener: ((_ playing: Bool) -> ())?
     
-    private var thread: NSThread?
+    private var thread: Thread?
     
     init(settings: Settings){
         self.settings = settings
@@ -26,7 +26,7 @@ class PatternPlayer {
     
     func play(){
 
-        thread = NSThread(target: self, selector: "loop", object: nil)
+        thread = Thread(target: self, selector: "loop", object: nil)
         thread?.start()
         
         notifyStateListener()
@@ -43,7 +43,7 @@ class PatternPlayer {
     var isPlaying: Bool {
         
         if let t = thread {
-            return !t.cancelled
+            return !t.isCancelled
         }
         
         return false
@@ -51,12 +51,12 @@ class PatternPlayer {
     
     private func notifyStateListener(){
         if let listener = stateListener {
-            listener(playing: isPlaying)
+            listener(isPlaying)
         }
     }
     
     private func nextElement() -> PlayableElement? {
-        iterator++
+        iterator += 1
         
         if iterator >= settings.pattern.elements.count {
             iterator = 0
@@ -67,7 +67,7 @@ class PatternPlayer {
     
     @objc private func loop() {
         
-        while(true && !NSThread.currentThread().cancelled) {
+        while(true && !Thread.current.isCancelled) {
             
             guard let element = nextElement() else{
                 stop()
@@ -75,27 +75,27 @@ class PatternPlayer {
             }
             
             if element is Note {
-                playElement(element)
+                playElement(element: element)
             }
             
             if let listener = beatListener {
-                listener(beatType: element.beatType, index: iterator)
+                listener(element.beatType, iterator)
             }
             
-            waitForElement(element)
+            waitForElement(element: element)
         }
         
-        NSThread.exit()
+        Thread.exit()
     }
     
     private func playElement(element: PlayableElement){
         
-        sounds.soundForBeatType(element.beatType).play()
+        sounds.soundForBeatType(beatType: element.beatType).play()
         
     }
     
     private func waitForElement(element: PlayableElement){
-        let nanoSecondsInterval = element.value.nanoSecondsWithTempo(settings.tempo, tempoNote: settings.tempoNote)
+        let nanoSecondsInterval = element.value.nanoSecondsWithTempo(tempo: settings.tempo, tempoNote: settings.tempoNote)
         mach_wait_until(mach_absolute_time() + nanoSecondsInterval)
     }
 }

@@ -17,12 +17,12 @@ struct Pattern {
     }
     
     init(values: [NoteValue]){
-        elements = values.enumerate().map(noteWithIndex)
+        elements = values.enumerated().map(noteWithIndex)
     }
     
     init(timeSignature: TimeSignature){
-        for var i = 0; i < timeSignature.beats; i++ {
-            elements.append(noteWithIndex(i, value: timeSignature.noteValue))
+        for var i in 0...timeSignature.beats-1 {
+            elements.append(noteWithIndex(index: i, value: timeSignature.noteValue))
         }
     }
     

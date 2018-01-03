@@ -37,20 +37,20 @@ struct Tempo {
     .Prestissimo : (168, 208)
     ]
     
-    var bpm: Int?
+    var bpm: Int = 0
     
     var name: String {
         
-        let foundTempos = names.enumerate().filter({(index: Int, element: (TempoName, (Int, Int))) -> Bool in
-        let (_, (lower, upper)) = element
-        return bpm >= lower && bpm <= upper
+        let foundTempos = names.enumerated().filter({(index: Int, element: (TempoName, (Int, Int))) -> Bool in
+            let (_, (lower, upper)) = element
+            return bpm >= lower && bpm <= upper
         })
         
         let tempoNames = foundTempos.map { (index: Int, element: (TempoName, (Int, Int))) in
-        element.0.rawValue
+            element.0.rawValue
         }
         
-        return tempoNames.joinWithSeparator(" / ")
+        return tempoNames.joined(separator: " / ")
     }
         
 }

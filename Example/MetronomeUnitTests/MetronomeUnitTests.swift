@@ -27,7 +27,7 @@ class MetronomeUnitTests: XCTestCase {
         
         let metronome = Metronome()
         
-        let tickExpectation = expectationWithDescription("metronomeTick")
+        let tickExpectation = expectation(description: "metronomeTick")
         
         metronome.beatListener = { (beatType: BeatType, index: Int) in
             tickExpectation.fulfill()
@@ -35,12 +35,12 @@ class MetronomeUnitTests: XCTestCase {
         
         metronome.start()
         
-        waitForExpectationsWithTimeout(1.0) { (error) -> Void in }
+        waitForExpectations(timeout: 1.0) { (error) -> Void in }
     }
     
     func testNoteCalculation(){
-        XCTAssertEqual(NoteValue.Quarter.numberOfNotesInNote(.Whole), 4)
-        XCTAssertEqual(NoteValue.Eight.numberOfNotesInNote(.Quarter), 2)
+        XCTAssertEqual(NoteValue.Quarter.numberOfNotesInNote(note: .Whole), 4)
+        XCTAssertEqual(NoteValue.Eight.numberOfNotesInNote(note: .Quarter), 2)
     }
     
     func testTempoNames(){
