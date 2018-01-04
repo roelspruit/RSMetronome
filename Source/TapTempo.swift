@@ -8,18 +8,18 @@
 
 import Foundation
 
-class TapTempo {
+public class TapTempo {
     
     var maximumSamples = 3
     
     private var samples = [TimeInterval]()
     private var lastTap: Date?
     
-    init(samples: Int = 3){
+    public init(samples: Int = 3){
        maximumSamples = samples
     }
     
-    var tempo: Int {
+    public var tempo: Int {
         
         guard !samples.isEmpty else {
             return 0
@@ -30,7 +30,7 @@ class TapTempo {
         return bpm
     }
     
-    func tap() -> Int{
+    public func tap() -> Int{
         
         let currentDate = Date()
         

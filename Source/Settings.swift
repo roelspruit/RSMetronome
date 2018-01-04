@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Settings {
+public struct Settings {
     
-    var timeSignature = TimeSignature(beats: 4, noteValue: .Quarter)
-    var tempo = 100
-    var tempoNote = NoteValue.Quarter
-    var pattern = Pattern.QuarterNotes
+    public var timeSignature = TimeSignature(beats: 4, noteValue: .Quarter)
+    public var tempo = 100
+    public var tempoNote = NoteValue.Quarter
+    public var pattern = Pattern.QuarterNotes
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BeatType {
+public enum BeatType {
     case DownBeat
     case UpBeat
     case Beat

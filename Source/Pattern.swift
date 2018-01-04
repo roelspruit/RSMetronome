@@ -7,20 +7,20 @@
 
 import UIKit
 
-struct Pattern {
+public struct Pattern {
     
     var iterator = 0
     var elements = [PlayableElement]()
     
-    init(elements: [PlayableElement]){
+    public init(elements: [PlayableElement]){
         self.elements = elements
     }
     
-    init(values: [NoteValue]){
+    public init(values: [NoteValue]){
         elements = values.enumerated().map(noteWithIndex)
     }
     
-    init(timeSignature: TimeSignature){
+    public init(timeSignature: TimeSignature){
         for i in 0...timeSignature.beats-1 {
             elements.append(noteWithIndex(index: i, value: timeSignature.noteValue))
         }

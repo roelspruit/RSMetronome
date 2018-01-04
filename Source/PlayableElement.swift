@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PlayableElement {
+public protocol PlayableElement {
     var value: NoteValue { get }
     var beatType: BeatType { get }
 }

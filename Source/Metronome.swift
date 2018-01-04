@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Metronome {
+public class Metronome {
 
-    var settings: Settings = Settings() {
+    public var settings: Settings = Settings() {
         didSet{
             patternPlayer?.settings = settings
         }
@@ -20,13 +20,13 @@ class Metronome {
     
     private var patternPlayer: PatternPlayer?
     
-    init(stateListener: ((_ playing: Bool) -> ())? = nil, beatListener: ((_ beatType: BeatType, _ index: Int) -> ())? = nil){
+    public init(stateListener: ((_ playing: Bool) -> ())? = nil, beatListener: ((_ beatType: BeatType, _ index: Int) -> ())? = nil){
         self.beatListener = beatListener
         self.stateListener = stateListener
     }
     
     /// Start the metronome
-    func start(){
+    public func start(){
         
         // Make sure it's stopped first
         stop()
@@ -38,7 +38,7 @@ class Metronome {
     }
     
     /// Stop the metronome
-    func stop(){
+    public func stop(){
         
         if let player = patternPlayer {
             player.stop()
@@ -46,7 +46,7 @@ class Metronome {
     }
     
     /// Toggle the playing of the metronome
-    func toggle(){
+    public func toggle(){
         
         if isPlaying {
             stop()
@@ -56,7 +56,7 @@ class Metronome {
     }
     
     /// Returns a boolean indicating if the metronome is currently playing
-    var isPlaying: Bool {
+    public var isPlaying: Bool {
         
         if let player = patternPlayer {
             return player.isPlaying

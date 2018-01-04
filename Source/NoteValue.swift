@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NoteValue: Int {
+public enum NoteValue: Int {
     
     case ThirtySecond  = 32
     case Sixteenth  = 16

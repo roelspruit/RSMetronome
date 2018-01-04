@@ -22,7 +22,7 @@ enum TempoName: String {
     case Prestissimo = "Prestissimo"
 }
 
-struct Tempo {
+public struct Tempo {
         
     private let names: [TempoName: (Int, Int)] = [
     .Largo : (40, 50),

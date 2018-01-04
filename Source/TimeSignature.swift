@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct TimeSignature {
-    var beats = 4
-    var noteValue = NoteValue.Quarter
+public struct TimeSignature {
+    public var beats = 4
+    public var noteValue = NoteValue.Quarter
 }
