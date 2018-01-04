@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'RSMetronome'
-  s.version = '1.0'
+  s.version = '1.1'
   s.license = 'MIT'
   s.summary = 'A collection of helper functions to layout elements in Swift'
   s.homepage = 'https://github.com/roelspruit/RSMetronome'
