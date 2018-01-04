@@ -26,7 +26,7 @@ class PatternPlayer {
     
     func play(){
 
-        thread = Thread(target: self, selector: "loop", object: nil)
+        thread = Thread(target: self, selector: #selector(loop), object: nil)
         thread?.start()
         
         notifyStateListener()

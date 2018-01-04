@@ -33,7 +33,7 @@ class ViewController: UIViewController{
         var colorCount = 1
         var lightBackground = false
         
-        for var i in 0...15 {
+        for _ in 0...15 {
             
             let btn = UIButton()
             btn.backgroundColor = lightBackground ? UIColor.lightGray : UIColor.darkGray
