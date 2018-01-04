@@ -21,7 +21,7 @@ struct Pattern {
     }
     
     init(timeSignature: TimeSignature){
-        for var i in 0...timeSignature.beats-1 {
+        for i in 0...timeSignature.beats-1 {
             elements.append(noteWithIndex(index: i, value: timeSignature.noteValue))
         }
     }
