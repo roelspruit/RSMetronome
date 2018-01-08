@@ -11,7 +11,7 @@ public struct TimeSignature {
     public var beats = 4
     public var noteValue = NoteValue.Quarter
     
-    init(beats: Int, noteValue: NoteValue) {
+    public init(beats: Int, noteValue: NoteValue) {
         self.beats = beats
         self.noteValue = noteValue
     }
