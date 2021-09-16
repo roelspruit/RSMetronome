@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/roelspruit/RSMetronome.svg)](https://travis-ci.org/roelspruit/RSMetronome)
-
 # RSMetronome
 RSMetronome is an library written in Swift that can be used to implement a basic metronome.
 

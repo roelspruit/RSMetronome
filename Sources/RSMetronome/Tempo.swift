@@ -46,9 +46,11 @@ public struct Tempo {
             return bpm >= lower && bpm <= upper
         })
         
-        let tempoNames = foundTempos.map { (index: Int, element: (TempoName, (Int, Int))) in
-            element.0.rawValue
-        }
+        let tempoNames = foundTempos
+            .map { (index: Int, element: (TempoName, (Int, Int))) in
+                element.0.rawValue
+            }
+            .sorted()
         
         return tempoNames.joined(separator: " / ")
     }

@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-@testable import RSMetronomeExample
+@testable import RSMetronome
 
 class MetronomeUnitTests: XCTestCase {
     
