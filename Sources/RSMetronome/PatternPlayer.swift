@@ -9,7 +9,7 @@
 import Foundation
 
 class PatternPlayer {
-
+    
     var settings = Settings()
     
     private var sounds = Sounds()
@@ -25,7 +25,7 @@ class PatternPlayer {
     }
     
     func play(){
-
+        
         thread = Thread(target: self, selector: #selector(loop), object: nil)
         thread?.start()
         
@@ -89,13 +89,11 @@ class PatternPlayer {
     }
     
     private func playElement(element: PlayableElement){
-        
-        sounds.soundForBeatType(beatType: element.beatType).play()
-        
+        sounds.soundForBeatType(beatType: element.beatType).play()        
     }
     
     private func waitForElement(element: PlayableElement){
-        let nanoSecondsInterval = element.value.nanoSecondsWithTempo(tempo: settings.tempo, tempoNote: settings.tempoNote)
-        mach_wait_until(mach_absolute_time() + nanoSecondsInterval)
+        let timeInterval = element.value.timeIntervalWithTempo(tempo: settings.tempo, tempoNote: settings.tempoNote)
+        mach_wait_until(mach_absolute_time() + timeInterval)
     }
 }
