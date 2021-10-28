@@ -13,6 +13,7 @@ public struct Settings {
     public var tempo = 100
     public var tempoNote = NoteValue.Quarter
     public var pattern = Pattern.QuarterNotes
+    public var audioEnabled = true
     
     public init() {
     }

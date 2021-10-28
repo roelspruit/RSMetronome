@@ -17,18 +17,17 @@ public struct Pattern {
     }
     
     public init(values: [NoteValue]){
-        elements = values.enumerated().map(noteWithIndex)
+        elements = values.map(noteWithValue)
     }
     
     public init(timeSignature: TimeSignature){
-        for i in 0...timeSignature.beats-1 {
-            elements.append(noteWithIndex(index: i, value: timeSignature.noteValue))
+        for _ in 0...timeSignature.beats-1 {
+            elements.append(noteWithValue(timeSignature.noteValue))
         }
     }
     
-    private func noteWithIndex(index: Int, value: NoteValue) -> Note{
-        let beatType = index == 0 ? BeatType.DownBeat : BeatType.Beat
-        return Note(value: value, beatType: beatType)
+    private func noteWithValue(_ value: NoteValue) -> Note {
+        return Note(value: value, beatType: BeatType.Beat)
     }
     
     static var QuarterNotes: Pattern {

@@ -74,7 +74,7 @@ class PatternPlayer {
                 continue
             }
             
-            if element is Note {
+            if element is Note && settings.audioEnabled {
                 playElement(element: element)
             }
             
