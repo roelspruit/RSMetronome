@@ -8,19 +8,29 @@
 import UIKit
 import AudioToolbox
 
-struct Sounds {
-    let Tick = Sound(fileName: "tick")
-    let Tock = Sound(fileName: "tock")
+struct SoundSet {
+    
+    let downBeat: Sound
+    let upBeat: Sound
+    let beat: Sound
+    
+    static var clave = SoundSet(
+        downBeat: Sound(fileName: "tick"),
+        upBeat: Sound(fileName: "tock"),
+        beat: Sound(fileName: "tock")
+    )
+    
+    static var cowbell = SoundSet(
+        downBeat: Sound(fileName: "bleep"),
+        upBeat: Sound(fileName: "bleep"),
+        beat: Sound(fileName: "bleep")
+    )
     
     func soundForBeatType(beatType: BeatType) -> Sound {
-        
         switch beatType {
-            
-        case .DownBeat:
-            return Tick
-            
-        default:
-            return Tock
+            case .DownBeat: return downBeat
+            case .UpBeat: return upBeat
+            default: return beat
         }
     }
 }

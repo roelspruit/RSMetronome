@@ -11,8 +11,7 @@ import Foundation
 class PatternPlayer {
     
     var settings = Settings()
-    
-    private var sounds = Sounds()
+    var soundSet: SoundSet
     private var iterator = -1
     
     var beatListener: ((_ beatType: BeatType, _ index: Int) -> ())?
@@ -20,8 +19,10 @@ class PatternPlayer {
     
     private var thread: Thread?
     
-    init(settings: Settings){
+    init(settings: Settings,
+         soundSet: SoundSet){
         self.settings = settings
+        self.soundSet = soundSet
     }
     
     func play(){
@@ -89,7 +90,7 @@ class PatternPlayer {
     }
     
     private func playElement(element: PlayableElement){
-        sounds.soundForBeatType(beatType: element.beatType).play()        
+        soundSet.soundForBeatType(beatType: element.beatType).play()        
     }
     
     private func waitForElement(element: PlayableElement){

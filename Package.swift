@@ -22,7 +22,8 @@ let package = Package(
             name: "RSMetronome",
             resources: [
                 .copy("Sounds/tick.caf"),
-                .copy("Sounds/tock.caf")
+                .copy("Sounds/tock.caf"),
+                .copy("Sounds/bleep.caf")
             ]
         ),        
         .testTarget(
